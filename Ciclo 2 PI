@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main(){
+    setlocale(LC_ALL, "Portuguese");
+
+    int c1, c2, c3, c4, c5;
+
+    printf("Digite o número que representa o valor pencentual do atual estágio de desenvolvimento de cada etapa:\n\n");
+
+    while (1){
+        printf("Análise e especificação de requisitos: ");
+        scanf("%d", &c1);
+        printf("Elaboração do projeto: ");
+        scanf("%d", &c2);
+        printf("Codificação: ");
+        scanf("%d", &c3);
+        printf("Fase de testes: ");
+        scanf("%d", &c4);
+        printf("Implantação: ");
+        scanf("%d", &c5);
+
+        printf("\nSumário das etapas do projeto:\n");
+        printf("Análise e especificação de requisitos: %d%%\n", c1);
+        printf("Elaboração do projeto: %d%%\n", c2);
+        printf("Codificação: %d%%\n", c3);
+        printf("Fase de testes: %d%%\n", c4);
+        printf("Implantação: %d%%\n\n", c5);
+
+        if (c1 == 100 && c2 == 100 && c3 == 100 && c4 == 100 && c5 == 100){
+            printf("O projeto foi finalizado.");
+            return 0;
+        }
+
+        printf("Atualização dos estágios de cada etapa:\n");
+    }
+}
